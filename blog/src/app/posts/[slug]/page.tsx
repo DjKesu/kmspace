@@ -20,10 +20,10 @@ export default function Post({ params }: { params: { slug: string } }) {
       <article className="mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
         <div className="prose lg:prose-xl">
-          <ReactMarkdown
+        <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
-              img: MarkdownImage
+              img: (props) => <MarkdownImage {...props} />
             }}
           >
             {post.content}
