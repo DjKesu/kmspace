@@ -1,17 +1,19 @@
 import Image from 'next/image';
 import { ImageProps } from 'next/image';
 
-const MarkdownImage = ({ src, alt, ...props }: ImageProps) => {
+interface MarkdownImageProps extends Omit<ImageProps, 'src'> {
+  src?: string;
+}
+
+const MarkdownImage = ({ src, alt = '', ...props }: MarkdownImageProps) => {
   if (!src) return null;
 
   return (
     <Image
       src={src}
-      alt={alt || ''}
+      alt={alt}
       width={600}
       height={400}
-      layout="responsive"
-      objectFit="contain"
       {...props}
     />
   );
