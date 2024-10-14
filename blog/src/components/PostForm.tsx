@@ -1,21 +1,26 @@
-'use client';
-
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 
 export default function PostForm() {
   const [title, setTitle] = useState('');
   const [slug, setSlug] = useState('');
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState(''); // Handles string content
+  const [structuredContent, setStructuredContent] = useState({}); // Handles JSON content
+  const [isJsonContent, setIsJsonContent] = useState(false); // Toggle for JSON or plain text
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      const body = isJsonContent
+        ? { title, slug, content: structuredContent }
+        : { title, slug, content };
+
       const response = await fetch('/api/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ title, slug, content }),
+        body: JSON.stringify(body),
       });
 
       if (response.ok) {
@@ -24,6 +29,7 @@ export default function PostForm() {
         setTitle('');
         setSlug('');
         setContent('');
+        setStructuredContent({});
       } else {
         const errorData = await response.json();
         alert(`Error: ${errorData.error}`);
@@ -52,13 +58,33 @@ export default function PostForm() {
         placeholder="Slug"
         required
       />
-      <textarea
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        className="w-full p-2 border rounded h-60"
-        placeholder="Content (Markdown supported)"
-        required
-      />
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            checked={isJsonContent}
+            onChange={() => setIsJsonContent(!isJsonContent)}
+          />
+          Add structured JSON content
+        </label>
+      </div>
+      {isJsonContent ? (
+        <textarea
+          value={JSON.stringify(structuredContent, null, 2)}
+          onChange={(e) => setStructuredContent(JSON.parse(e.target.value))}
+          className="w-full p-2 border rounded h-60"
+          placeholder="Content (JSON)"
+          required
+        />
+      ) : (
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          className="w-full p-2 border rounded h-60"
+          placeholder="Content (Markdown supported)"
+          required
+        />
+      )}
       <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded">
         Create Post
       </button>
