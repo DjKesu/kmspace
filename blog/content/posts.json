@@ -3,6 +3,220 @@
     "title": "Workload Characterization and CPU Burst Prediction",
     "slug": "os-workload-characterization-and-cpu-burst-prediction",
     "excerpt": "I'm working on a research project that involves workload characterization and CPU burst prediction. This post is a summary of the work I've done so far.",
-    "content": "updating soon... "
+    "content": "updating soon..."
+  },
+  {
+    "title": "Real Leetcode 71",
+    "slug": "list-of-algorithmically-important-leetcode-problems-across-16-categories",
+    "excerpt": "Generated this list of problems with GPT based on things I've seen so far, and our CS 341 algorithms course. In reality, most technical interviews are going to be simpler, except some, and knowing this will help with any and all of them.",
+    "content": {
+      "Sorting Algorithms": {
+        "QuickSort / MergeSort / HeapSort": {
+          "912": "https://leetcode.com/problems/sort-an-array",
+          "215": "https://leetcode.com/problems/kth-largest-element-in-an-array",
+          "75": "https://leetcode.com/problems/sort-colors"
+        },
+        "Counting Sort / Bucket Sort": {
+          "164": "https://leetcode.com/problems/maximum-gap",
+          "1365": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number"
+        }
+      },
+      "Searching Algorithms": {
+        "Binary Search": {
+          "704": "https://leetcode.com/problems/binary-search",
+          "33": "https://leetcode.com/problems/search-in-rotated-sorted-array",
+          "34": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array"
+        },
+        "Exponential Search": {
+          "702": "https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size"
+        }
+      },
+      "Graph Algorithms": {
+        "BFS": {
+          "200": "https://leetcode.com/problems/number-of-islands",
+          "994": "https://leetcode.com/problems/rotting-oranges",
+          "127": "https://leetcode.com/problems/word-ladder"
+        },
+        "DFS": {
+          "695": "https://leetcode.com/problems/max-area-of-island",
+          "79": "https://leetcode.com/problems/word-search"
+        },
+        "Dijkstra’s Algorithm": {
+          "743": "https://leetcode.com/problems/network-delay-time",
+          "787": "https://leetcode.com/problems/cheapest-flights-within-k-stops"
+        },
+        "Union-Find": {
+          "323": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph",
+          "547": "https://leetcode.com/problems/number-of-provinces",
+          "684": "https://leetcode.com/problems/redundant-connection"
+        },
+        "Topological Sort": {
+          "207": "https://leetcode.com/problems/course-schedule",
+          "210": "https://leetcode.com/problems/course-schedule-ii"
+        },
+        "Minimum Spanning Tree (Kruskal’s/Prim’s)": {
+          "1584": "https://leetcode.com/problems/min-cost-to-connect-all-points"
+        }
+      },
+      "Dynamic Programming (DP)": {
+        "Fibonacci Sequence": {
+          "509": "https://leetcode.com/problems/fibonacci-number",
+          "70": "https://leetcode.com/problems/climbing-stairs"
+        },
+        "Longest Increasing Subsequence": {
+          "300": "https://leetcode.com/problems/longest-increasing-subsequence"
+        },
+        "0/1 Knapsack": {
+          "416": "https://leetcode.com/problems/partition-equal-subset-sum",
+          "494": "https://leetcode.com/problems/target-sum"
+        },
+        "Longest Common Subsequence": {
+          "1143": "https://leetcode.com/problems/longest-common-subsequence"
+        },
+        "Coin Change": {
+          "322": "https://leetcode.com/problems/coin-change",
+          "518": "https://leetcode.com/problems/coin-change-2"
+        },
+        "Edit Distance": {
+          "72": "https://leetcode.com/problems/edit-distance"
+        },
+        "Palindromic Substrings": {
+          "5": "https://leetcode.com/problems/longest-palindromic-substring",
+          "647": "https://leetcode.com/problems/palindromic-substrings"
+        },
+        "DP on Grids": {
+          "64": "https://leetcode.com/problems/minimum-path-sum",
+          "62": "https://leetcode.com/problems/unique-paths"
+        }
+      },
+      "Greedy Algorithms": {
+        "Activity Selection": {
+          "435": "https://leetcode.com/problems/non-overlapping-intervals",
+          "452": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons"
+        },
+        "Task Scheduling": {
+          "621": "https://leetcode.com/problems/task-scheduler"
+        },
+        "Greedy Interval Problems": {
+          "253": "https://leetcode.com/problems/meeting-rooms-ii",
+          "1029": "https://leetcode.com/problems/two-city-scheduling"
+        }
+      },
+      "Backtracking Algorithms": {
+        "N-Queens": {
+          "51": "https://leetcode.com/problems/n-queens",
+          "52": "https://leetcode.com/problems/n-queens-ii"
+        },
+        "Sudoku Solver": {
+          "37": "https://leetcode.com/problems/sudoku-solver"
+        },
+        "Permutations/Combinations": {
+          "46": "https://leetcode.com/problems/permutations",
+          "77": "https://leetcode.com/problems/combinations"
+        },
+        "Word Search": {
+          "79": "https://leetcode.com/problems/word-search"
+        },
+        "Combination Sum": {
+          "39": "https://leetcode.com/problems/combination-sum"
+        }
+      },
+      "Divide and Conquer": {
+        "Merge Sort": {
+          "912": "https://leetcode.com/problems/sort-an-array",
+          "315": "https://leetcode.com/problems/count-of-smaller-numbers-after-self"
+        },
+        "Closest Pair of Points": {
+          "149": "https://leetcode.com/problems/max-points-on-a-line"
+        },
+        "Binary Search Problems": {
+          "153": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array"
+        }
+      },
+      "Sliding Window Algorithms": {
+        "Fixed Sliding Window": {
+          "239": "https://leetcode.com/problems/sliding-window-maximum",
+          "3": "https://leetcode.com/problems/longest-substring-without-repeating-characters"
+        },
+        "Variable Sliding Window": {
+          "76": "https://leetcode.com/problems/minimum-window-substring",
+          "209": "https://leetcode.com/problems/minimum-size-subarray-sum"
+        }
+      },
+      "Bit Manipulation Algorithms": {
+        "Single Non-Repeated Number": {
+          "136": "https://leetcode.com/problems/single-number",
+          "260": "https://leetcode.com/problems/single-number-iii"
+        },
+        "Counting Set Bits": {
+          "338": "https://leetcode.com/problems/counting-bits"
+        },
+        "Power of Two": {
+          "231": "https://leetcode.com/problems/power-of-two"
+        },
+        "Bit Masking": {
+          "78": "https://leetcode.com/problems/subsets",
+          "137": "https://leetcode.com/problems/single-number-ii"
+        }
+      },
+      "Mathematical Algorithms": {
+        "GCD": {
+          "462": "https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii"
+        },
+        "Sieve of Eratosthenes": {
+          "204": "https://leetcode.com/problems/count-primes"
+        },
+        "Modular Arithmetic": {
+          "1492": "https://leetcode.com/problems/the-kth-factor-of-n"
+        }
+      },
+      "String Algorithms": {
+        "KMP Algorithm": {
+          "28": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string"
+        },
+        "Trie Data Structure": {
+          "208": "https://leetcode.com/problems/implement-trie-prefix-tree",
+          "211": "https://leetcode.com/problems/design-add-and-search-words-data-structure"
+        }
+      },
+      "Priority Queue / Heap Algorithms": {
+        "Kth Largest Element": {
+          "215": "https://leetcode.com/problems/kth-largest-element-in-an-array",
+          "973": "https://leetcode.com/problems/k-closest-points-to-origin"
+        },
+        "Merge k Sorted Lists": {
+          "23": "https://leetcode.com/problems/merge-k-sorted-lists"
+        }
+      },
+      "Prefix Sum Algorithms": {
+        "Range Sum Query": {
+          "303": "https://leetcode.com/problems/range-sum-query-immutable"
+        },
+        "2D Prefix Sum (Submatrix Sum)": {
+          "304": "https://leetcode.com/problems/range-sum-query-2d-immutable"
+        }
+      },
+      "Union-Find (Disjoint Set) Algorithms": {
+        "Connected Components": {
+          "323": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph"
+        },
+        "Cycle Detection": {
+          "684": "https://leetcode.com/problems/redundant-connection"
+        }
+      },
+      "Randomized Algorithms": {
+        "Reservoir Sampling": {
+          "398": "https://leetcode.com/problems/random-pick-index"
+        },
+        "QuickSelect": {
+          "215": "https://leetcode.com/problems/kth-largest-element-in-an-array"
+        }
+      },
+      "Segment Trees / Fenwick Trees (Binary Indexed Trees)": {
+        "Range Query Problems": {
+          "307": "https://leetcode.com/problems/range-sum-query-mutable"
+        }
+      }
+    }
   }
 ]
