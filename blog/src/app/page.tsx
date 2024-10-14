@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4">Hi, I&apos;m Krish.</h1>
-      <p className="mb-6">Find my blogs here.</p>
+      <p className="mb-6">Find my blogs and thoughts</p>
       <div className="space-y-6">
         {posts.map((post: any) => (
           <div key={post.slug} className="border-b pb-4">
